@@ -1,13 +1,6 @@
-$(document).ready(function () {
-    
-    var ul = document.createElement('ul');
-    $.each(students, function(i, item) {        
-        var li = document.createElement('li');
-        for(student in item){            
-            $(li).text(item['name'] + ' ' + item['surname'] + ' ' + item['email']);
-            $(li).appendTo(ul);
-        }
-    }
-    );
-    $(ul).appendTo('#students');
-});
+$('#students').append('<ul></ul>');
+$(students).each(function (i, student) {
+    $('#students ul').append('<li>' + student.name + ' ' + student.surname + ' ' + student.email + '</li>');
+}
+);
+
