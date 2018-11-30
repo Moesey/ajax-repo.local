@@ -1,6 +1,7 @@
 <?php
 
 class Router {
+
     static function init() {
 	$controller_name = 'main';
 	$action_name = 'index';
@@ -12,8 +13,8 @@ class Router {
 	    $action_name = strtolower($routes[2]);
 	}
 	$controller_name = ucfirst($controller_name);
-	$model_class = 'Model' . $controller_name;
-	$controller_class = 'Controller' . $controller_name;
+	$model_class = $controller_name . 'Model';
+	$controller_class = $controller_name . 'Controller';
 	$action = 'action_' . $action_name;
 	$model_path = "app/models/" . $model_class . '.php';
 	if (file_exists($model_path)) {
@@ -34,7 +35,7 @@ class Router {
     }
 
     static public function ErrorPage404() {
-	header($_SERVER['SERVER_PROTOCOL'].' 404 not found');
+	header($_SERVER['SERVER_PROTOCOL'] . ' 404 not found');
 	exit();
     }
 
