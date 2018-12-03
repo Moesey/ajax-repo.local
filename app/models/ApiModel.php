@@ -13,5 +13,12 @@ class ApiModel extends Model {
             }
         }
     }
+    
+    public function addStudent($name, $surname, $email){
+        if($this->db->connect_errno===0){
+            $query='INSERT INTO students (name, surname, email) values ("'.$name.'", "'.$surname.'", "'.$email.'")';
+            $this->db->query($query);
+        }
+    }
 }
 
