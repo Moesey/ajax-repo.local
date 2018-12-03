@@ -1,9 +1,11 @@
 <?php
 
 class Model {
+
     private $db;
-    
+
     public function __construct() {
-	$this->db = new mysqli(HOST, LOGIN, PASS, NAME);
+	$this->db = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
     }
+
 }
