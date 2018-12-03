@@ -5,6 +5,7 @@ class ApiController extends Controller{
 	$this->model=new ApiModel();
 	$users= $this->model->getUsers();
 	$json= json_encode($users);
+	header('Content-type: application/json; charset=utf-8');
 	echo $json;
     }
 }
