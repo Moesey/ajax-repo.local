@@ -1,12 +1,6 @@
 <?php
 
-class ApiModel {
-    
-    private $db;
-
-    public function __construct() {
-	$this->db = new mysqli(HOST, LOGIN, PASS, NAME);
-    }
+class ApiModel extends Model {
     
     public function getUsers(){
         if($this->db->connect_errno===0){
