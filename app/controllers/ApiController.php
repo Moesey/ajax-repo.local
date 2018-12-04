@@ -17,8 +17,13 @@ class ApiController extends Controller {
 	//     $this->model = new ApiModel();
 	//     $this->model->addStudent($name, $surname, $email);
 	// }
-    	var_dump($_POST);
-    	exit();
+	// header('Content-type: application/json; charset=utf-8');
+		$name = $_POST['name'];
+		$surname = $_POST['surname'];
+		$email = $_POST['email'];
+		$this->model = new ApiModel();
+		$this->model->addStudent($name, $surname, $email);
+		// header('Location: http://ajax-repo.local');
     }
 
 }
