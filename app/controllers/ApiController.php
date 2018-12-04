@@ -10,13 +10,15 @@ class ApiController extends Controller {
 	echo $json;
     }
 
-    public function action_add($name, $surname, $email) {
-	if ($name === null || $surname === null || $email === NULL) {
-	    return false;
-	} else {
-	    $this->model = new ApiModel();
-	    $this->model->addStudent($name, $surname, $email);
-	}
+    public function action_add() {
+	// if ($name === null || $surname === null || $email === NULL) {
+	//     return false;
+	// } else {
+	//     $this->model = new ApiModel();
+	//     $this->model->addStudent($name, $surname, $email);
+	// }
+    	var_dump($_POST);
+    	exit();
     }
 
 }

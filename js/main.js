@@ -13,7 +13,7 @@ function getStudents() {
 	    var json = xhr.responseText;
 	    var students = JSON.parse(json);
 	    if (students) {
-		showStudents(students)
+		showStudents(students);
 	    }
 	}
     };
