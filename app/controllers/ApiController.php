@@ -22,5 +22,12 @@ class ApiController extends Controller
             $this->model->addStudent($name, $surname, $email);
 	}
     }
+    public function action_delete(){
+	$id = filter_input(INPUT_POST, 'id');
+	if(is_null($id)){
+	    $this->model = new ApiModel();
+            $this->model->deleteStudent($id);
+	}
+    }
 
 }
