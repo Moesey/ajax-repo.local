@@ -17,12 +17,10 @@ class ApiController extends Controller
         $name = filter_input(INPUT_POST, 'name');
         $surname = filter_input(INPUT_POST, 'surname');
         $email = filter_input(INPUT_POST, 'email');
-        if ($name === null || $surname === null || $email === NULL) {
-            return false;
-        } else {
+        if ($name !== null || $surname !== null || $email !== NULL) {
             $this->model = new ApiModel();
             $this->model->addStudent($name, $surname, $email);
-        }
+	}
     }
 
 }
