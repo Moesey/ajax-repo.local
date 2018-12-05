@@ -20,5 +20,12 @@ class ApiModel extends Model {
             $this->db->query($query);
         }
     }
+    
+    public function deleteStudent($id){
+        if($this->db->connect_errno === 0){
+            $query = 'DELETE from students where id='.$id;
+            $this->db->query($query);
+        }
+    }
 }
 

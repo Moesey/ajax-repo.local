@@ -12,6 +12,7 @@ class ApiController extends Controller
         echo $json;
     }
 
+
     public function action_add()
     {
         $name = filter_input(INPUT_POST, 'name');
