@@ -12,22 +12,7 @@ class ApiController extends Controller
         echo $json;
     }
 
-<<<<<<< HEAD
-    public function action_add() {
-	// if ($name === null || $surname === null || $email === NULL) {
-	//     return false;
-	// } else {
-	//     $this->model = new ApiModel();
-	//     $this->model->addStudent($name, $surname, $email);
-	// }
-	// header('Content-type: application/json; charset=utf-8');
-		$name = $_POST['name'];
-		$surname = $_POST['surname'];
-		$email = $_POST['email'];
-		$this->model = new ApiModel();
-		$this->model->addStudent($name, $surname, $email);
-		// header('Location: http://ajax-repo.local');
-=======
+
     public function action_add()
     {
         $name = filter_input(INPUT_POST, 'name');
@@ -37,7 +22,6 @@ class ApiController extends Controller
             $this->model = new ApiModel();
             $this->model->addStudent($name, $surname, $email);
 	}
->>>>>>> dev
     }
 
 }
