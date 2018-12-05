@@ -25,7 +25,7 @@ class ApiController extends Controller
     }
     public function action_delete(){
 	$id = filter_input(INPUT_POST, 'id');
-	if(is_null($id)){
+	if(!is_null($id)){
 	    $this->model = new ApiModel();
             $this->model->deleteStudent($id);
 	}
